@@ -5,8 +5,10 @@ info:
     Upload a spreadsheet file (.xlsx or .csv) containing transaction data. The API extracts business name, transaction date/amount/currency, charge details from the comments column, and the credit card used.
   version: 1.0.0
 servers:
-  - url: https://api.example.com/v1
-    description: Production server
+servers:
+  - url: https://example.com/api
+    description: Example placeholder server
+
 paths:
   /extract-transactions:
     post:
