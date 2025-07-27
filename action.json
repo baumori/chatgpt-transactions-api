@@ -1,0 +1,18 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Transaction Extractor",
+  "name_for_model": "transactionExtractor",
+  "description_for_human": "Upload a spreadsheet to extract transaction and charge details",
+  "description_for_model": "Extracts transactions from uploaded spreadsheet files (.csv/.xlsx). Returns business name, transaction and charge details, and credit card used.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://yourdomain.com/openapi.yaml",
+    "has_user_authentication": false
+  },
+  "logo_url": "https://yourdomain.com/logo.png",
+  "contact_email": "support@yourdomain.com",
+  "legal_info_url": "https://yourdomain.com/legal"
+}
