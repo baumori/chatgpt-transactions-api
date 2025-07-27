@@ -1,11 +1,15 @@
+openapi: 3.1.0
+info:
+  title: Spreadsheet Transaction Extractor API
+  version: 1.0.0
 servers:
-  - url: https://postman-echo.com
-    description: Temporary echo server
+  - url: https://kabalot.co.il/version-test/api/1.1/wf
+    description: Bubble API
 paths:
-  /post:
+  /extract-transactions:
     post:
       operationId: extractTransactions
-      summary: Dummy request for GPT import
+      summary: Extract transactions from uploaded spreadsheet
       requestBody:
         required: true
         content:
@@ -18,7 +22,7 @@ paths:
                   format: binary
       responses:
         '200':
-          description: Dummy response
+          description: Bubble response
           content:
             application/json:
               schema:
