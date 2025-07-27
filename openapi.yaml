@@ -4,7 +4,7 @@ info:
   description: Upload a spreadsheet file (.xlsx or .csv) to extract transaction data.
   version: 1.0.0
 servers:
-  - url: https://kabalot.co.il/version-test/api/1.1/wf/extract-transactions
+  - url: https://kabalot.co.il/version-test/api/1.1/wf/
     description: Temporary public echo server
 paths:
   /extract-transactions:
