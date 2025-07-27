@@ -9,7 +9,7 @@
   },
   "api": {
     "type": "openapi",
-    "url": "https://raw.githubusercontent.com/baumori/chatgpt-transactions-api/heads/main/openapi.yaml",
+    "url": "https://raw.githubusercontent.com/baumori/chatgpt-transactions-api/main/openapi.yaml",
     "has_user_authentication": false
   },
   "logo_url": "https://yourdomain.com/logo.png",
