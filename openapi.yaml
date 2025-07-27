@@ -4,7 +4,7 @@ info:
   description: Upload a spreadsheet file (.xlsx or .csv) to extract transaction data.
   version: 1.0.0
 servers:
-  - url: https://postman-echo.com
+  - url: https://postman-echo.com/post
     description: Temporary public echo server
 paths:
   /extract-transactions:
