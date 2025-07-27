@@ -1,19 +1,16 @@
 openapi: 3.1.0
 info:
   title: Spreadsheet Transaction Extractor API
-  description: |
-    Upload a spreadsheet file (.xlsx or .csv) and extract transaction data.
+  description: Upload a spreadsheet file (.xlsx or .csv) to extract transaction data.
   version: 1.0.0
 servers:
   - url: https://postman-echo.com
-    description: Temporary echo server for schema validation
+    description: Temporary public echo server
 paths:
   /extract-transactions:
     post:
       operationId: extractTransactions
-      summary: Extract transactions from spreadsheet
-      description: |
-        Accepts a spreadsheet and returns transaction data including business name, transaction/charge details, and credit card used.
+      summary: Extract transactions from a spreadsheet
       requestBody:
         required: true
         content:
@@ -26,7 +23,7 @@ paths:
                   format: binary
       responses:
         '200':
-          description: Extracted transaction data
+          description: Example extracted transaction list
           content:
             application/json:
               schema:
@@ -41,7 +38,6 @@ paths:
                       format: date
                     transactionAmount:
                       type: number
-                      format: float
                     transactionCurrency:
                       type: string
                     chargeDate:
@@ -49,7 +45,6 @@ paths:
                       format: date
                     chargeAmount:
                       type: number
-                      format: float
                     chargeCurrency:
                       type: string
                     creditCardUsed:
