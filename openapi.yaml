@@ -1,0 +1,61 @@
+openapi: 3.1.0
+info:
+  title: Spreadsheet Transaction Extractor API
+  description: |
+    Upload a spreadsheet file (.xlsx or .csv) containing transaction data. The API extracts business name, transaction date/amount/currency, charge details from the comments column, and the credit card used.
+  version: 1.0.0
+servers:
+  - url: https://api.example.com/v1
+    description: Production server
+paths:
+  /extract-transactions:
+    post:
+      operationId: extractTransactions
+      summary: Extract transactions from spreadsheet
+      description: |
+        Accepts a spreadsheet file and returns a list of extracted transaction objects with fields parsed from the data and comments.
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+                  description: Upload a .xlsx or .csv file with transaction data
+      responses:
+        '200':
+          description: Successfully extracted transactions
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    businessName:
+                      type: string
+                    transactionDate:
+                      type: string
+                      format: date
+                    transactionAmount:
+                      type: number
+                      format: float
+                    transactionCurrency:
+                      type: string
+                    chargeDate:
+                      type: string
+                      format: date
+                    chargeAmount:
+                      type: number
+                      format: float
+                    chargeCurrency:
+                      type: string
+                    creditCardUsed:
+                      type: string
+        '400':
+          description: Invalid request or file format
+        '500':
+          description: Server error
