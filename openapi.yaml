@@ -6,7 +6,7 @@ info:
   version: 1.0.0
 servers:
 servers:
-  - url: https://example.com/api
+  - url: https://postman-echo.com
     description: Example placeholder server
 
 paths:
