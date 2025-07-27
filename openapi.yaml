@@ -4,7 +4,7 @@ info:
   description: Upload a spreadsheet and extract transaction details.
   version: 1.0.0
 servers:
-  - url: https://kabalot.co.il/version-test/api/1.1/wf
+  - url: https://financemanagement-47304.bubbleapps.io/version-test/api/1.1/wf
     description: Bubble API base
 paths:
   /extract-transactions:
